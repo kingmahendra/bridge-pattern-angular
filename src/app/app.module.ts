@@ -3,23 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { OfferInitation } from './Implementor/offer-initation';
-import { Product } from './Products/product';
-import { RbbComponent } from './Products/rbb/rbb.component';
 
-import { RzbComponent } from './Products/rzb/rzb.component';
+import { RbbModifyComponent } from './products/rbb-modify/rbb-modify.component';
+import { RbbOnboardingComponent } from './products/rbb-onboarding/rbb-onboarding.component';
+import { RzbModifyComponent } from './products/rzb-modify/rzb-modify.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RzbComponent,
-    RbbComponent
+    RbbOnboardingComponent,
+    RbbModifyComponent,
+    RzbModifyComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers:[OfferInitation],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

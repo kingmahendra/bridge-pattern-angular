@@ -1,4 +1,5 @@
 import { InjectionToken } from "@angular/core";
-import { Product } from "./product";
+import { ProductType } from "./product-type";
 
-export const PRODUCT_TOKEN = new InjectionToken<Product>("product");
+
+export const PRODUCT_TYPE = new InjectionToken<ProductType>("product-type");

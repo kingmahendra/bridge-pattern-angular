@@ -1,26 +1,19 @@
-import { Component, Inject, OnInit, ViewChild } from '@angular/core';
-import { OfferInitation } from './Implementor/offer-initation';
-import { Product } from './Products/product';
-import { PRODUCT_TOKEN } from './Products/product-token';
-
-
-
+import { Component, ViewChild } from '@angular/core';
+import { PRODUCT_TYPE } from './products/product-token';
+import { ProductType } from './products/product-type';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers:[
-    OfferInitation
-  ]
 })
 export class AppComponent {
-  @ViewChild(PRODUCT_TOKEN) product:Product | undefined;
+  @ViewChild(PRODUCT_TYPE) productType: ProductType | undefined;
   constructor(){
     
   }
  ngAfterViewInit(): void {
-  this.product?.onboard()
+  this.productType?.load();
    
  }
   title = 'pattern';
