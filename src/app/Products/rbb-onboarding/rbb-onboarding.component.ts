@@ -22,7 +22,7 @@ import { FLOW_TOKEN } from '../flow-token';
 })
 export class RbbOnboardingComponent extends ProductType {
   override load(): void {
-    console.log(`Loading ${this.type} onboarding Flow`)
+    console.log(`%cLoading ${this.type} onboarding Flow`,'color:green;font-size:20px')
     this.flow.initialise();
   }
 

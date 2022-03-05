@@ -19,7 +19,7 @@ import { PRODUCT_TYPE } from 'src/app/products/product-token';
 export class RbbModifyComponent extends ProductType {
 
   override load(): void {
-    console.log(`Loading ${this.type} modify Flow`)
+    console.log(`%cLoading ${this.type} modify Flow`,'color:green;font-size:20px')
     this.flow.initialise();
   }
 

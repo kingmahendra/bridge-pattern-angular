@@ -6,6 +6,6 @@ import { Flow } from "./flow";
 export class OnboardingFlow implements Flow {
     name: string = "Onboarding";
     initialise() {
-        console.log(' initalizing offer for ',this.name);
+        console.log(' %cInitalizing offer for %s','color:blue;font-size:20px',this.name);
     }
 }
