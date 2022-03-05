@@ -12,9 +12,10 @@ export class AppComponent {
   constructor(){
     
   }
- ngAfterViewInit(): void {
-  this.productType?.load();
-   
+
+ ngAfterViewChecked(): void {
+   this.productType?.load();
  }
-  title = 'pattern';
+
+  flow = '';
 }
