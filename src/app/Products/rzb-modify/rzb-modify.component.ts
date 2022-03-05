@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FlowModify } from 'src/app/implementor/flow-modify';
+import { ModifyFlow } from 'src/app/implementor/modify-flow';
 
 import { PRODUCT_TYPE } from 'src/app/products/product-token';
 import { ProductType } from 'src/app/products/product-type';
@@ -12,7 +12,7 @@ import { ProductType } from 'src/app/products/product-type';
       provide: PRODUCT_TYPE,
       useExisting:RzbModifyComponent
     },
-    FlowModify
+    ModifyFlow
   ]
 })
 export class RzbModifyComponent extends ProductType {
@@ -21,7 +21,7 @@ export class RzbModifyComponent extends ProductType {
     this.flow.initialise();
   }
 
-  constructor(private flowType: FlowModify) {
+  constructor(private flowType: ModifyFlow) {
     super(flowType)
     this.type="RZB"
    }

@@ -3,7 +3,7 @@ import { Flow } from "./flow";
 
 
 @Injectable()
-export class FlowDiscontinue implements Flow {
+export class DiscontinueFlow implements Flow {
     name: string = "Discontinue";
     initialise() {
         console.log(' initalizing offer for ',this.name);

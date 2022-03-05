@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { FlowOnboarding } from 'src/app/implementor/flow-onboarding';
+import { Component, Inject, OnInit } from '@angular/core';
+import { OnboardingFlow } from 'src/app/implementor/onboarding-flow';
 import { ProductType } from 'src/app/products/product-type';
 import { PRODUCT_TYPE } from 'src/app/products/product-token';
+import { Flow } from 'src/app/implementor/flow';
+import { FLOW_TOKEN } from '../flow-token';
 @Component({
   selector: 'app-rbb-onboarding',
   templateUrl: './rbb-onboarding.component.html',
@@ -11,7 +13,11 @@ import { PRODUCT_TYPE } from 'src/app/products/product-token';
       provide: PRODUCT_TYPE,
       useExisting:RbbOnboardingComponent
     },
-    FlowOnboarding
+    {
+      provide: FLOW_TOKEN,
+      useClass: OnboardingFlow
+    }
+    // OnboardingFlow
   ]
 })
 export class RbbOnboardingComponent extends ProductType {
@@ -20,12 +26,8 @@ export class RbbOnboardingComponent extends ProductType {
     this.flow.initialise();
   }
 
-  constructor(private flowType: FlowOnboarding) {
+  constructor(@Inject(FLOW_TOKEN) private flowType: Flow) {
     super(flowType)
     this.type="RBB"
    }
-
-  ngOnInit(): void {
-  }
-
 }
