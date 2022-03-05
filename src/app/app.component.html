@@ -2,9 +2,11 @@
 <button (click)="flow='rbb-onboarding'">RBB Onboarding</button>&nbsp;
 <button (click)="flow='rbb-modify'">RBB Modify</button>&nbsp;
 <button (click)="flow='rzb-modify'">RZB Modify</button>&nbsp;
+<button (click)="flow='ivb'">IVB</button>&nbsp;
 
 
 
 <app-rbb-onboarding *ngIf="flow =='rbb-onboarding'"></app-rbb-onboarding>
 <app-rbb-modify *ngIf="flow =='rbb-modify'"></app-rbb-modify>
 <app-rzb-modify *ngIf="flow =='rzb-modify'"></app-rzb-modify>
+<app-ivb *ngIf="flow =='ivb'"></app-ivb>
