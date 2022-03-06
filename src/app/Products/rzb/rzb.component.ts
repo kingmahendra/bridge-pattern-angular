@@ -6,18 +6,18 @@ import { PRODUCT_TYPE } from '../product-token';
 import { ProductType } from '../product-type';
 
 @Component({
-  selector: 'app-ivb',
-  templateUrl: './ivb.component.html',
-  styleUrls: ['./ivb.component.css'],
+  selector: 'app-rzb',
+  templateUrl: './rzb.component.html',
+  styleUrls: ['./rzb.component.css'],
   providers:[
     {
       provide: PRODUCT_TYPE,
-      useExisting:IvbComponent
+      useExisting: RzbComponent
     },
     FLOW_PROVIDER
   ]
 })
-export class IvbComponent extends ProductType {
+export class RzbComponent extends ProductType {
   override load(): void {
     console.log(`%cLoading ${this.type} product`,'color:green;font-size:20px')
     this.flow.initialise();
@@ -25,6 +25,7 @@ export class IvbComponent extends ProductType {
 
   constructor(@Inject(FLOW_TOKEN) private flowType: Flow) {
     super(flowType);
-    this.type = 'IVB'
+    this.type = 'RZB'
   }
+
 }

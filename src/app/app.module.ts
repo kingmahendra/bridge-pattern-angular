@@ -8,6 +8,8 @@ import { RbbModifyComponent } from './products/rbb-modify/rbb-modify.component';
 import { RbbOnboardingComponent } from './products/rbb-onboarding/rbb-onboarding.component';
 import { RzbModifyComponent } from './products/rzb-modify/rzb-modify.component';
 import { IvbComponent } from './products/ivb/ivb.component';
+import { RbbComponent } from './products/rbb/rbb.component';
+import { RzbComponent } from './products/rzb/rzb.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { IvbComponent } from './products/ivb/ivb.component';
     RbbOnboardingComponent,
     RbbModifyComponent,
     RzbModifyComponent,
-    IvbComponent
+    IvbComponent,
+    RbbComponent,
+    RzbComponent
   ],
   imports: [
     BrowserModule,
