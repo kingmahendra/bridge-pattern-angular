@@ -1,9 +1,15 @@
-<h1> pattern example</h1>
+<h1 class="header"> Bridge pattern implementation</h1>
 
-<button (click)="flow='ivb'">IVB</button>&nbsp;
-<button (click)="flow='rbb'">RBB</button>&nbsp;
-<button (click)="flow='rzb'">RZB</button>&nbsp;
+<img class="diagram" src="../assets/bridge1.png"/>
 
-<app-ivb *ngIf="flow =='ivb'"></app-ivb>
-<app-rbb *ngIf="flow =='rbb'"></app-rbb>
-<app-rzb *ngIf="flow =='rzb'"></app-rzb>
+<div class="content">
+
+    <button (click)="flow='ivb'">IVB</button>&nbsp;
+    <button (click)="flow='rbb'">RBB</button>&nbsp;
+    <button (click)="flow='rzb'">RZB</button>&nbsp;
+    
+    <app-ivb *ngIf="flow =='ivb'"></app-ivb>
+    <app-rbb *ngIf="flow =='rbb'"></app-rbb>
+    <app-rzb *ngIf="flow =='rzb'"></app-rzb>
+</div>
+
