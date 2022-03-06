@@ -14,13 +14,9 @@ import { ProductType } from './products/product-type';
 })
 export class AppComponent {
   @ViewChild(PRODUCT_TYPE) productType: ProductType | undefined;
-  constructor(){
-    
-  }
-
- ngAfterViewChecked(): void {
-   this.productType?.load();
- }
-
   flow = '';
+  ngAfterViewChecked(): void {
+    this.productType?.load();
+  }
+ 
 }

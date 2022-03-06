@@ -11,14 +11,14 @@ export const enum FlowType {
     Discontinue='discontinue'
 }
 
-export const flowFactory = (config: string): Flow => {
-    switch(config) {
-        case FlowType.Onboarding: return new OnboardingFlow();
-        case FlowType.Modify: return  new ModifyFlow();
-        case FlowType.Discontinue: return new DiscontinueFlow();
-        default: return new ModifyFlow()
-    }
-   // return config === 'modify' ? new ModifyFlow() : new OnboardingFlow()
+const flowMap = new Map<FlowType, Flow>([
+    [FlowType.Onboarding, new OnboardingFlow()],
+    [FlowType.Modify, new ModifyFlow()],
+    [FlowType.Discontinue, new DiscontinueFlow()]
+])
+
+const flowFactory = (config: FlowType) => {
+    return flowMap.get(config)
 }
 
 export const FLOW_PROVIDER =  {
