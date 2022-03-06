@@ -1,8 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { Flow } from 'src/app/implementor/flow';
 import { FLOW_PROVIDER } from 'src/app/implementor/flow-factory';
-import { FLOW_TOKEN } from '../flow-token';
-import { PRODUCT_TYPE } from '../product-token';
+import { FLOW_TOKEN } from '../../tokens/flow-token';
+import { PRODUCT_TYPE } from '../../tokens/product-token';
 import { ProductType } from '../product-type';
 
 @Component({

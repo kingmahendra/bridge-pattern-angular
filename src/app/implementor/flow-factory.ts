@@ -1,5 +1,5 @@
-import { APP_CONFIG } from "../products/app-config.token"
-import { FLOW_TOKEN } from "../products/flow-token"
+import { APP_CONFIG } from "../tokens/app-config.token"
+import { FLOW_TOKEN } from "../tokens/flow-token"
 import { DiscontinueFlow } from "./discontinue-flow"
 import { Flow } from "./flow"
 import { ModifyFlow } from "./modify-flow"

@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { FlowType } from './implementor/flow-factory';
-import { APP_CONFIG } from './products/app-config.token';
-import { PRODUCT_TYPE } from './products/product-token';
+import { APP_CONFIG } from './tokens/app-config.token';
+import { PRODUCT_TYPE } from './tokens/product-token';
 import { ProductType } from './products/product-type';
 
 @Component({
