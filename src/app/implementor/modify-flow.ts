@@ -6,6 +6,6 @@ import { Flow } from "./flow";
 export class ModifyFlow implements Flow {
     name: string = "Modify";
     initialise() {
-        console.log('%cInitalizing offer for %s ','color:blue;font-size:20px',this.name,);
+        console.log('%cInitializing offer for %s ','color:blue;font-size:20px',this.name,);
     }
 }

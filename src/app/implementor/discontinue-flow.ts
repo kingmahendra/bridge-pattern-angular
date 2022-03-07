@@ -6,6 +6,6 @@ import { Flow } from "./flow";
 export class DiscontinueFlow implements Flow {
     name: string = "Discontinue";
     initialise() {
-        console.log(' %cInitalizing offer for %s','color:blue;font-size:20px',this.name);
+        console.log(' %cInitializing offer for %s','color:blue;font-size:20px',this.name);
     }
 }

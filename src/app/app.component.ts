@@ -9,7 +9,7 @@ import { ProductType } from './products/product-type';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   providers:[
-    { provide: APP_CONFIG, useValue:FlowType.Modify },
+    { provide: APP_CONFIG, useValue:FlowType.Onboarding},
   ]
 })
 export class AppComponent {
