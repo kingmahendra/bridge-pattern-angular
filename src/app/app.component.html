@@ -3,10 +3,11 @@
 <img class="diagram" src="../assets/bridge1.png"/>
 
 <div class="content">
-
+   <nav>
     <button (click)="flow='ivb'">IVB</button>&nbsp;
     <button (click)="flow='rbb'">RBB</button>&nbsp;
     <button (click)="flow='rzb'">RZB</button>&nbsp;
+   </nav>
     
     <app-ivb *ngIf="flow =='ivb'"></app-ivb>
     <app-rbb *ngIf="flow =='rbb'"></app-rbb>

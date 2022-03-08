@@ -23,7 +23,7 @@ export class RzbComponent extends ProductType {
     this.flow.initialise();
   }
 
-  constructor(@Inject(FLOW_TOKEN) private flowType: Flow) {
+  constructor(@Inject(FLOW_TOKEN) public flowType: Flow) {
     super(flowType);
     this.type = 'RZB'
   }
