@@ -1,16 +1,15 @@
 <h1 class="header"> Bridge pattern implementation</h1>
 
 <img class="diagram" src="../assets/bridge1.png"/>
+<nav class="nav">
+    <button [routerLink]="['/ivb']" routerLinkActive="router-link-active" >IVB</button>&nbsp;
+    <button [routerLink]="['/rbb']" routerLinkActive="router-link-active">RBB</button>&nbsp;
+    <button [routerLink]="['/rzb']" routerLinkActive="router-link-active">RZB</button>&nbsp;
+</nav>
 
 <div class="content">
-   <nav>
-    <button (click)="flow='ivb'">IVB</button>&nbsp;
-    <button (click)="flow='rbb'">RBB</button>&nbsp;
-    <button (click)="flow='rzb'">RZB</button>&nbsp;
-   </nav>
+  
+    <router-outlet></router-outlet>
     
-    <app-ivb *ngIf="flow =='ivb'"></app-ivb>
-    <app-rbb *ngIf="flow =='rbb'"></app-rbb>
-    <app-rzb *ngIf="flow =='rzb'"></app-rzb>
 </div>
 
